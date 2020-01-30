@@ -1,3 +1,12 @@
+---
+layout: post
+title: "Basic Concepts of Mechanism Design"
+tags: [economics, mechanism design]
+use_math: true
+---
+
+
+
 # intro
 
 메커니즘 디자인이란 무엇인가? 
