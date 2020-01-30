@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+배웠는데 까먹을 법한 것들의 모음
 
-### More Information
+### Contact
 
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+[email](mailto:willlit@korea.ac.kr)
