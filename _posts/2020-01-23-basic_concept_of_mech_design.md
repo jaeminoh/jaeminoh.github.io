@@ -3,6 +3,7 @@ layout: post
 title: "Basic Concepts of Mechanism Design"
 tags: [economics, mechanism design]
 use_math: true
+author: 오재민, 최성호
 ---
 
 
