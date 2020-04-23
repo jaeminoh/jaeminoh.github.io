@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'about probability'
-use_math: true
+title: "about probability"
 author: 오재민
-tags:[mathematics, probability]
+tags: [mathematics, probability]
+use_math: true
 ---
 
 # 확률을 어떻게 정의하지?
