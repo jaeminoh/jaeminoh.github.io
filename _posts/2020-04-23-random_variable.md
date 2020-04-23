@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 확률?
+title: 'probability?'
 use_math: true
 author: 오재민
 tags:[mathematics, probability]
