@@ -1,0 +1,27 @@
+I" <p>맘에 드는 구절</p>
+
+<ol>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>$\epsilon - \delta$ arguments is mainly about finding sufficient conditions of $</td>
+          <td>f(x)-q</td>
+          <td>&lt; \epsilon$.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>polymath: a person of wide-range knowledge or learning</li>
+</ol>
+
+<hr />
+
+<p>궁금한 것</p>
+
+<ol>
+  <li>how to define differentiation with not using $\epsilon - \delta$ condition. (e.g. algebraically, or topologically)</li>
+  <li></li>
+</ol>
+
+:ET

@@ -1,0 +1,39 @@
+I"%<h1 id="몇가지">몇가지</h1>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>texdoc package-name
+</code></pre></div></div>
+
+<p>to read documentation of $\LaTeX$ package ‘package-name’</p>
+
+<hr />
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="p">{</span>beamer<span class="p">}</span>
+
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>hyperref<span class="p">}</span>
+
+<span class="k">\title</span><span class="na">[About Beamer]</span><span class="p">{</span>Let's Use Beamer<span class="p">}</span>
+<span class="k">\subtitle</span><span class="p">{</span>example<span class="p">}</span>
+<span class="k">\author</span><span class="p">{</span>Oh, Jaemin<span class="p">}</span>
+<span class="k">\institute</span><span class="p">{</span>MY UNIV<span class="p">}</span>
+<span class="k">\date</span><span class="p">{</span><span class="k">\today</span><span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+
+<span class="k">\frame</span><span class="p">{</span><span class="k">\titlepage</span><span class="p">}</span>
+
+<span class="nt">\begin{frame}</span>
+	<span class="k">\frametitle</span><span class="p">{</span>Title Page<span class="p">}</span>
+	Beamer is used to make presentation slide.
+	
+	See this <span class="k">\href</span><span class="p">{</span>https://www.overleaf.com/learn/latex/Beamer<span class="p">}{</span>link<span class="p">}</span>.
+<span class="nt">\end{frame}</span>
+
+<span class="nt">\end{document}</span>
+</code></pre></div></div>
+
+<p>beamer is latex package to make presentation slide.</p>
+
+<hr />
+
+:ET
