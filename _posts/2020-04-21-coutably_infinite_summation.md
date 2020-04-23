@@ -15,7 +15,7 @@ use_math: true
 
 
 
-처음 이 정의를 접했을 때, 2번 조건이 필요한 이유는 단지 $\sigma$-algebra가 $\sigma - \cup$ closed이기 때문이라고 생각했다. countably additive로부터 단조성이나, (finitely)additive, continuity from below 등 여러 성질들을 도출해 낼 수 있다는 것은 측도론을 다루는 책에 대부분 소개되어 있다. 그렇다면, 자연스럽게 uncountably additive를 만족하는 측도는 훨씬 더 좋은 성질들이 많지 않을까란 생각을 해 볼 수 있다.
+처음 이 정의를 접했을 때, 2번 조건이 필요한 이유는 단지 $\sigma$-algebra가 $\sigma - \cup$ closed이기 때문이라고 생각했다. countably additive로부터 단조성이나, (finitely)additive, continuity from below 등 여러 성질들을 도출해 낼 수 있다는 것은 측도론을 다루는 책에 대부분 소개되어 있다. 그렇다면, uncountably additive를 만족하는 측도는 훨씬 더 좋은 성질들이 많지 않을까란 생각을 자연스럽게 해 볼 수 있다.
 
 그러나 다음과 같은 사실이 알려져 있다.
 
