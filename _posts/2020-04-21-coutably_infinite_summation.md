@@ -10,7 +10,7 @@ use_math: true
 
  주어진 $\sigma$-algebra $\mathcal{F}$에서 정의된 측도 $\mu : \mathcal{F} \rightarrow [0, \infty]$는 다음 두 가지를 만족한다.
 
-1. $\mu(\empty) = 0$
+1. $\mu(\emptyset) = 0$
 2. $\mu$ is countably additive, i.e. for given disjoint set sequence $A_i \in \mathcal{F}$, $\mu(\bigcup_{i=1}^\infty A_i) = \sum_{i=1}^\infty \mu(A_i)$
 
 
