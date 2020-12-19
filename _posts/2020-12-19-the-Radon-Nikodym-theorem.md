@@ -26,7 +26,7 @@ $\zeta = \mu + \nu$로 두고, linear functional $L: L_2(\zeta) \rightarrow \mat
 
  첫번째 증명은 Stein 선생님이 쓴 책을 보면 찾을 수 있고, 두번째 증명은 wikipedia에 검색하면 찾을 수 있다. 두 증명 중, 내가 흥미롭게 본 부분은 두번째 증명이다. 왜냐하면 complex function을 공부할 때 비슷한 상황이 몇번 있었기 때문이다. 
 
- 가장 먼저 마주친 상황은 the Schwarz lemma를 배울 때였다. 원점을 고정하는 $f \in H(D, D)$는 항상 $\lvert f'(0)\lvert \leq 1$일 수 밖에 없는데, 만약 modulus가 1이 된다면 bijective map이 될 수 밖에 없었다. 원점에서의 modulus of derivative가 가장 커지니까, 아주 좋은 함수(rotation)가 된 상황이다.
+ 가장 먼저 마주친 상황은 the Schwarz lemma를 배울 때였다. 원점을 고정하는 $f \in H(D, D)$는 항상 $\mid f'(0)\mid \leq 1$일 수 밖에 없는데, 만약 modulus가 1이 된다면 bijective map이 될 수 밖에 없었다. 원점에서의 modulus of derivative가 가장 커지니까, 아주 좋은 함수(rotation)가 된 상황이다.
 
  그 다음으로는 the Riemann mapping theorem을 증명할 때였다. $\mathcal{F} = \{ f: f\in H(U, D), f(P) = 0, f \text{ is one to one.}\}$라는 class에서, modulus of $f'(P)$를 가장 크게 만드는 함수를 찾으면 그 함수가 $U, D$를 연결해주는 conformal map이 되었다.
 
