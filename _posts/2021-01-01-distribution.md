@@ -12,7 +12,7 @@ use_math: true
 
  $C_c^\infty (\mathbb{R}^d)$는 compactly supported smooth function on $d$-dimensional Euclidean space의 집합이다. 다루기 굉장히 용이한 집합이다. 특징으로는, 모든 $L_p$공간들에 대하여 해당 집합이 dense하다($1\leq p < \infty$). molification을 통해 해당 성질을 보일 수 있다. 저 집합을 앞으로 $D$라고 쓰겠다.
 
- 초함수들의 집합은 $D^*$이라고 쓴다. 별표가 붙은 것에서 눈치챌 수 있듯이, $D$의 dual space라고 생각할 수 있는데, 조건이 좀 더 붙는다. $F \in D^*$는 continuous linear functional on $D$로, $F(\phi_i) \rightarrow F(\phi)$ whenever $\phi_i \rightarrow \phi$ in $D$를 만족해야 한다.
+ 초함수들의 집합은 $D^\star$이라고 쓴다. 별표가 붙은 것에서 눈치챌 수 있듯이, $D$의 dual space라고 생각할 수 있는데, 조건이 좀 더 붙는다. $F \in D^\star$는 continuous linear functional on $D$로, $F(\phi_i) \rightarrow F(\phi)$ whenever $\phi_i \rightarrow \phi$ in $D$를 만족해야 한다.
 
  초함수를 정의하고 나면, 반드시 다음 예시를 마주칠 것이다. $g \in L_1^{loc}$에 대해 $F_g(\phi) = \int g(x)\phi(x)dx$로 정의되는 초함수 $F_g$. 저게 초함수인 것은 간단하게 체크할 수 있다. 이 예시는 초함수의 operation에 대한 정의의 motivation이 되니 꼭 기억해둘 필요가 있다.
 
