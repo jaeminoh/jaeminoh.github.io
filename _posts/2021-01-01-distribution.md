@@ -16,7 +16,7 @@ use_math: true
 
  초함수를 정의하고 나면, 반드시 다음 예시를 마주칠 것이다. $g \in L_1^{loc}$에 대해 $F_g(\phi) = \int g(x)\phi(x)dx$로 정의되는 초함수 $F_g$. 저게 초함수인 것은 간단하게 체크할 수 있다. 이 예시는 초함수의 operation에 대한 정의의 motivation이 되니 꼭 기억해둘 필요가 있다.
 
- 가장 기초적인 operation으로, multiplication with $\psi \in D$, translation, reflection, derivative, convolution이 있는데, 그 중 derivative를 살펴보자. multi-index $\alpha$에 대하여 $\partial_x^\alpha F(\phi) = (-1)^{|\alpha|}F(\partial_x^\alpha \phi)$로 정의된다. 위에 반드시 기억해야 하는 예시 $F_g$에 대입하여, 부분적분을 사용해보면 굉장히 자연스러운 정의라는 것을 느낄 수 있다. 
+ 가장 기초적인 operation으로, multiplication with $\psi \in D$, translation, reflection, derivative, convolution이 있는데, 그 중 derivative를 살펴보자. multi-index $\alpha$에 대하여 $\partial_x^\alpha F(\phi) = (-1)^{\mid \alpha \mid}F(\partial_x^\alpha \phi)$로 정의된다. 위에 반드시 기억해야 하는 예시 $F_g$에 대입하여, 부분적분을 사용해보면 굉장히 자연스러운 정의라는 것을 느낄 수 있다. 
 
  derivative operation이 중요한 이유는, $g$가 smooth하지 않더라도 항상 위 operation은 정의가 된다는 것이다. 이를 weak derivative(약한 도함수) 혹은 distributional derivative(초함수적 도함수)라고 한다. 편미분방정식의 관점에서 보면 일반적인 함수 $g$ 대신 $F_g$를 어떤 편미분방정식의 해로 생각할 수 있다는 이야기다. 편미분방정식을 풀 때 convolution이나, fourier transform을 자주 사용해서 풀기 때문에, 해당 operation들이 정의될 수 있는 초함수들의 공간에서 편미분방정식을 푸는 것은 solution 집합의 범위를 크게 넓혀주는 것으로 이해할 수 있다.
 
