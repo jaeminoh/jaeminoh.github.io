@@ -6,6 +6,9 @@ theme:
 plugins:
   - search
   - blog
+  - bibtex:
+      bib_file: "bibliography/library.bib"
+      csl_file: "bibliography/ima.csl"
 
 markdown_extensions:
   - def_list

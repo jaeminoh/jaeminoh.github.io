@@ -8,6 +8,7 @@ date:
 
 # Neural general circulation models
 Machine Learning accelerated global weather prediction model developed by Google.
+Written in JAX framework [@jax2018github;@deepmind2020jax]
 Two advantages over pure ML methods:
 
 - Uncertainty estimates
