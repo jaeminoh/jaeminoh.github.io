@@ -9,20 +9,22 @@
       
       
       
+        <link rel="prev" href="../../../../2020/01/03/mechanism-design/">
       
-        <link rel="next" href="Presentation/24Spring/1.sciml_workshop/">
+      
+        <link rel="next" href="../../17/review-reducing-and-meta-analysing-estimates-from-distributed-lag-non-linear-models-%EB%85%BC%EB%AC%B8-%EC%A0%95%EB%A6%AC/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
     
     
       
-        <title>Jaemin Oh</title>
+        <title>Review: Distributed lag non-linear models (DLNM) - Jaemin Oh</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.3cba04c6.min.css">
       
       
 
@@ -41,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -70,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wecome" class="md-skip">
+        <a href="#review-distributed-lag-non-linear-models-dlnm" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Jaemin Oh" class="md-header__button md-logo" aria-label="Jaemin Oh" data-md-component="logo">
+    <a href="../../../../.." title="Jaemin Oh" class="md-header__button md-logo" aria-label="Jaemin Oh" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -106,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Wecome!
+              Review: Distributed lag non-linear models (DLNM)
             
           </span>
         </div>
@@ -172,7 +174,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -181,7 +185,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Jaemin Oh" class="md-nav__button md-logo" aria-label="Jaemin Oh" data-md-component="logo">
+    <a href="../../../../.." title="Jaemin Oh" class="md-nav__button md-logo" aria-label="Jaemin Oh" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -196,19 +200,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -217,7 +212,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -299,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Presentation/24Spring/1.sciml_workshop/" class="md-nav__link">
+      <a href="../../../../../Presentation/24Spring/1.sciml_workshop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -320,7 +314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Presentation/24Spring/4.kms/" class="md-nav__link">
+      <a href="../../../../../Presentation/24Spring/4.kms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -353,17 +347,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -377,7 +373,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -388,12 +384,14 @@
                 
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
-      <a href="blog/" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -451,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="blog/archive/2024/" class="md-nav__link">
+      <a href="../../../../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -474,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="blog/archive/2022/" class="md-nav__link">
+      <a href="../../../../archive/2022/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -497,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="blog/archive/2020/" class="md-nav__link">
+      <a href="../../../../archive/2020/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -534,6 +532,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -546,6 +546,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      세 줄 요약:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      본문
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -553,43 +588,88 @@
             
           
           
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2022-01-13 00:00:00" class="md-ellipsis">January 13, 2022</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              3 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
 
 
-<h1 id="wecome">Wecome!</h1>
-<p>I am Jaemin Oh (오재민) a math PhD student at Korea Advanced Institute of Science and Techonology (KAIST).</p>
-<p><strong>Contact</strong></p>
-<ul>
-<li>Office: Rm 4213, E2-1</li>
-<li>{firstname}_{lastname} @ kaist.ac.kr</li>
-<li><a href="https://github.com/jaeminoh">GitHub</a></li>
-</ul>
-<p><strong>Education</strong></p>
-<ul>
-<li>PhD student, Aug. 2020 - Current, KAIST, Daejeon, South Korea</li>
-<li>B.S. Mathematics, Aug. 2020, Korea University, Seoul, South Korea<ul>
-<li>Military Service, Feb. 2017 - Feb. 2019</li>
-</ul>
-</li>
-</ul>
-<p><strong>Publications</strong></p>
-<ul>
-<li>Separable Physics-informed Neural Networks for Solving the BGK Model of the Boltzmann Equation. <a href="https://arxiv.org/abs/2403.06342">arXiv</a><ul>
-<li>Coauthors: <a href="https://scholar.google.com/citations?user=Q9GSED8AAAAJ&amp;hl=en&amp;oi=ao">Seungyeon Cho</a>, <a href="https://silverbottlep.github.io">Eunbyung Park</a>, <a href="https://seokbaeyun.wordpress.com">Seok-Bae Yun</a>, and <a href="https://www.youngjoonhong.com">Youngjoon Hong</a>. </li>
-</ul>
-</li>
-</ul>
-<p><strong>CV</strong></p>
-<ul>
-<li><a href="https://drive.google.com/drive/folders/1zomZKKUpxNJb7NjXynIlHGp_tPqhe4WS?usp=share_link">Google drive</a></li>
-</ul>
+<h1 id="review-distributed-lag-non-linear-models-dlnm">Review: Distributed lag non-linear models (DLNM)</h1>
+<p>Author: A. Gasparrini, B. Armstrong and M. G. Kenward</p>
+<p>Journal: Statistics in Medicine (2010)</p>
+<h3 id="_1">세 줄 요약:</h3>
+<ol>
+<li>Delayed effect가 있는 event의 비선형 exposure-relationship을 설명하기 위해 DLNM을 도입했다.</li>
+<li>R package "dlnm"으로 해당 내용이 구현되었다. [1]</li>
+<li>Penalization을 도입하면 더 발전될 여지가 있다. [2, 3, 4]</li>
+</ol>
+<h3 id="_2">본문</h3>
+<p>이해를 돕기 위한 예시로, 1987년부터 2000년까지 뉴욕에서 수집된 <strong>National Morbidity, Mortality, and Air Pollution Study (NMMAPS)</strong>의 온도-사망 (temperature-mortality) 자료를 생각하자. 반응변수는 사망, 설명변수는 온도이다. 즉 평균온도가 건강에 미치는 영향이 어떻게 되는지를 살펴보고 싶다는 뜻이다. 당일의 극단적인 온도가 당일의 건강에 영향을 미치는 것과 함께, 며칠 전의 극단적인 온도도 오늘의 건강에 영향을 줄 수 있다. 이런 상황을 delayed effect가 있다고 말하고, delay를 반영하기 위해서 "lag dimension"도 함께 고려해야 잘 맞는 온도-사망 관계를 찾을 수 있다. 여기 까지 이해했다면 모델의 이름이 이제는 자연스럽게 느껴진다. Distributed lag들의 delay effect를 고려한 온도-사망 사이의 non-linear relationship을 찾는 방법이다. 기존의 방법들은 delayed effect, 온도의 effect 둘 중 하나를 간단하게(linear) 생각해서 이루어졌다. 이 논문은 두 가지 effect 모두 복잡하게 모델링할 수 있게 해준다는 점에서 그 의의를 찾을 수 있다.</p>
+<p>DLNM의 간단한 경우로 Distributed Lag Model (DLM)을 먼저 알아보자. Non-linear를 의미하는 "N"이 빠졌으니, 온도-사망 관계를 linear하다고 가정했음을 눈치챌 수 있다. 관측된 설명변수들을 <span class="arithmatex">\(( x_t )_ {t = 1}^n\)</span>, 반응변수는 <span class="arithmatex">\(y_t\)</span>, lag의 갯수는 L이라고 하겠다. Delayed effect를 반영하기 위해서 <span class="arithmatex">\(Q\)</span>라는 <span class="arithmatex">\(n \times (L+1)\)</span> 모양의 행렬을 정의해야 하는데, <span class="arithmatex">\(t\)</span>-번째 행은 <span class="arithmatex">\([x_t, x_{t-1}, \cdots, x_{t-L}]\)</span>로 이루어져 있다. 관측된 설명변수를 열벡터로 두고, 오른쪽으로 확장해 가면서 시점을 하나씩 뒤로 밀었다고 보면 된다. 온도가 사망에 미치는 영향을 linear하다고 가정했기 때문에, <span class="arithmatex">\(g(\lambda) = Q\beta\)</span>의 coefficient vector <span class="arithmatex">\(\beta\)</span>를 결정해주는 일이 남았다. 이는 <span class="arithmatex">\(\beta = C \eta\)</span>로 결정되는데, <span class="arithmatex">\(C\)</span>는 lag vector <span class="arithmatex">\(\textbf{l} = [0, \cdots, L]^t\)</span>에 spline basis같은 것을 적용하여 얻어진 <span class="arithmatex">\((L+1)\times \nu_l\)</span> 모양의 행렬이고, <span class="arithmatex">\(\eta\)</span>는 우리가 찾아야 할 parameter이다. <span class="arithmatex">\(g(\lambda) = Q\beta\)</span>를 봤을 때 <span class="arithmatex">\(\beta\)</span>는 delay effect로 해석할 수 있고, <span class="arithmatex">\(\beta = C\eta\)</span>를 보면 delay effect를 lag vector <span class="arithmatex">\(\textbf{l}\)</span>의 non-linear function(e.g., spline)으로 설명하려고 하는 상황이라고 볼 수 있다.</p>
+<p>그럼 DLNM을 알아보자. 앞에서는 <span class="arithmatex">\(Q\)</span>라는 design 행렬에 <span class="arithmatex">\(\beta\)</span>를 곱한 모델이었다. <span class="arithmatex">\(Q\)</span>의 성분들은 가공되지 않은 단순한 온도자료였으므로, 여기에 spline 같은 것을 적용하여 design 행렬을 변형해주면 non-linear 관계를 모델링 할 수 있을 것이다. <span class="arithmatex">\(r_j\)</span>를 어떤 non-linear 함수(e.g., spline)를 생성하는 basis의 <span class="arithmatex">\(j\)</span>번째 녀석이라고 해보자. <span class="arithmatex">\(Q_j\)</span>는 위에서 정의한 <span class="arithmatex">\(Q\)</span>의 각 성분에 <span class="arithmatex">\(r_j\)</span>를 적용한 행렬이다. 그러면 DLM의 항이 변형된  <span class="arithmatex">\(g(\lambda) = Q_j C \eta\)</span>를 고려할 수 있다. 그러나 해당 식은 다른 basis의 effect들을 고려하고 있지 않고, <span class="arithmatex">\(\eta\)</span>역시 <span class="arithmatex">\(j\)</span>에 의존하지 않는 다소 딱딱한 식이기 때문에, <span class="arithmatex">\(\sum_j Q_j C \eta_j\)</span>로 다시 써 주게 되면 DLNM이 된다. <span class="arithmatex">\(W = \left[ Q_1 C \lvert \cdots \lvert Q_{\nu_x} C \right]\)</span>, <span class="arithmatex">\(\eta^t = [\eta_1 ^t \lvert \cdots \lvert \eta_{\nu_x}^t]\)</span>라고 둔다면 <span class="arithmatex">\(g(\lambda) = W\eta\)</span>로 쓸 수 있다. <span class="arithmatex">\(W\)</span>의 모양만 이해했다면 논문의 나머지 부분을 읽는 일은 일사천리가 된다.</p>
+<p>논문에 package "dlnm"을 이용한 예시와 그 코드가 들어있는데, lag dimension의 spline을 어떻게 설정한 것인지는 코드만 보고 알기 힘들었다. 패키지를 설명한 논문[1]에 자세한 설명이 들어있을 테니, 읽어보고 사용법을 읽혀두도록 하자.</p>
 <hr />
-<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=k8dZYD1VxAd8Rnk_wIonilPgUO4A81pfuRjybp95PF8&cl=ffffff&w=a"></script>
-
-
+<h3 id="references">References</h3>
+<ol>
+<li>Gasparrini, A. (2011). Distributed Lag Linear and Non-Linear Models in R: The Package dlnm. <em>Journal of Statistical Software</em>, <em>43</em>(8), 1–20. https://doi.org/10.18637/jss.v043.i08</li>
+<li>Eilers PHC, Currie ID, Durbn M. Fast and compact smoothing on large multidimensional grids. <em>Computational Statistics and Data Analysis</em> 2006; <strong>50</strong>(1):61-76.</li>
+<li>Eilers PH, Gampe J, Marx BD, Rau R. Modulation models for seasonal time series and incidence tables. <em>Statistics in Medicine</em> 2008; <strong>27</strong>(17):3430-3441.</li>
+<li>He S, Mazumdar S, Arena V. A comparative study of the use of GAM and GLM in air pollution research. <em>EnvironMetrics</em> 2006; <strong>17</strong>(1):81-93.</li>
+</ol>
 
 
 
@@ -598,14 +678,21 @@
 
 
   
+  
 
 
 
+  
 
-                
-              </article>
-            </div>
-          
+
+  
+
+
+
+      
+    </article>
+  </div>
+
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -636,12 +723,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
-        <script src="javascripts/mathjax.js"></script>
+        <script src="../../../../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

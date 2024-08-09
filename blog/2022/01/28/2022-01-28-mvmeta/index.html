@@ -1,0 +1,794 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../17/review-reducing-and-meta-analysing-estimates-from-distributed-lag-non-linear-models-%EB%85%BC%EB%AC%B8-%EC%A0%95%EB%A6%AC/">
+      
+      
+        <link rel="next" href="../../../02/11/review-attributable-risk-from-distributed-lag-models/">
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>2022 01 28 mvmeta - Jaemin Oh</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-B9XBB4QRXM"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-B9XBB4QRXM",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-B9XBB4QRXM",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#review-multivariate-meta-analysis-for-non-linear-and-other-multi-parameter-associations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Jaemin Oh" class="md-header__button md-logo" aria-label="Jaemin Oh" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jaemin Oh
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2022 01 28 mvmeta
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Jaemin Oh" class="md-nav__button md-logo" aria-label="Jaemin Oh" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Jaemin Oh
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wecome!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Presentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Presentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    24Spring
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            24Spring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Presentation/24Spring/1.sciml_workshop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scientific Machine Learning Workshop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Presentation/24Spring/4.kms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Korean Mathematical Sciences Spring Meeting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2022/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#review-multivariate-meta-analysis-for-non-linear-and-other-multi-parameter-associations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review: Multivariate meta-analysis for non-linear and other multi-parameter associations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      요약
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      소개
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      모델 설명
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      추정 방법
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      가설검정 및 관련된 통계량
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      예측
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2022-01-28 00:00:00" class="md-ellipsis">January 28, 2022</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              4 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+
+
+  <h1>2022 01 28 mvmeta</h1>
+
+<h3 id="review-multivariate-meta-analysis-for-non-linear-and-other-multi-parameter-associations">Review: Multivariate meta-analysis for non-linear and other multi-parameter associations</h3>
+<p>Author: A. Gasparrini, B. Armstrong, and M. G. Kenward</p>
+<p>Journal: Statistics in Medicine (2012)</p>
+<h3 id="_1">요약</h3>
+<ol>
+<li>Multivariate regression을 응용해서, outcome이 다변수 벡터인 경우도 메타분석이 가능하다.</li>
+<li>첫번째 저자가 내용을 정리해 R package "mvmeta"를 만들었으니, 활용하면 된다.</li>
+<li>이후에 나온 패키지 "mixmeta"는 이 모델에서 좀 더 일반화된 모델을 다룬다.</li>
+</ol>
+<h3 id="_2">소개</h3>
+<p><a href="https://jaeminoh.github.io/reducing-dlnm">지난 글</a>에서 meta-regression의 효율적인 계산을 위해 DLNM의 coefficient를 적절하게 reducing하는 방법을 알아봤다. 이 글에서는 그 coefficient를 가지고 meta-regression을 하는 방법을 알아본다. DLNM의 coefficient를 추정하는 과정은 first-stage, 그 coefficient를 meta-predictor를 통해 회귀분석하는 것을 second-stage라고 했었다. First-stage는 이 글에서 다루지 않을 것이므로, first-stage에서 얻어진 coefficient는 여기서 outcome이라고 부른다.</p>
+<p>메타 분석을 하는 이유는, study(e.g., 지역)간 effect size에 차이가 있을 수 있기 때문에 그것을 meta-predictor로 설명하기 위함이다. 이 논문에서는 주로 temperature-mortality와 같은 exposure-response relationship에 중점을 두지만, 계량경제학(실증) 같은 분야에서도 사용될 만 하다고 생각한다. 유명한 책 "총, 균, 쇠"에서 문명의 발달이 인종의 차이에서 유래한 것이 아니고 지역적인 차이에서 유래했다고 말했듯이, 개발도상국과 선진국 사이의 차이를 지역 변수로 설명할 수 있지 않을까? 라고 나이브하게 상상해본다.</p>
+<h3 id="_3">모델 설명</h3>
+<p>거두절미하고, 메타-regression이 아닌, 메타 분석의 모델부터 보자. <span class="arithmatex">\(\hat{\theta}_i \sim N_k (\theta, S_i +\Psi)\)</span>, <span class="arithmatex">\(i = 1, \cdots, m\)</span>. 여기서 <span class="arithmatex">\(i\)</span>는 study에 대한 인덱스, 그리고 <span class="arithmatex">\(k\)</span>는 <span class="arithmatex">\(\hat{\theta}_i\)</span>의 길이다. <span class="arithmatex">\(S_i\)</span>는 first-stage에서 추정된 <span class="arithmatex">\(\hat{\theta}_i\)</span>의 분산이다. 그럼 자연스럽게 <span class="arithmatex">\(\Psi\)</span>는 study 사이의 variability가 되고, <span class="arithmatex">\(S_i\)</span>는 study <span class="arithmatex">\(i\)</span>안에서 발생한 variability를 의미하게 된다. 이 모델을 살짝 확장하면 meta-regression 모델 <span class="arithmatex">\(\hat{\theta}_i \sim N_k (X_i \beta, S_i +\Psi)\)</span>가 되는데, <span class="arithmatex">\(X_i\)</span>는 meta-predictor로 이루어진 행렬이고 <span class="arithmatex">\(\beta\)</span>는 meta-regression의 coefficient가 된다. Multivariate regression을 하기 위해서 <span class="arithmatex">\(X_i = I_k \otimes x_i^t\)</span>이고 kronecker product의 정의는 지난 글과는 달리 wikipedia의 정의를 따른다. <span class="arithmatex">\(x_i\)</span>는 당연하게도 meta-predictor로 이루어진 <span class="arithmatex">\(p\)</span> 길이의 열벡터이다. 보통 intercept를 포함하기 때문에 맨 첫번째 성분은 1인 경우가 많다.</p>
+<p>이번엔 위 모델을 뜯어보면서 왜 저렇게 생겼는지 정당성을 부여할 차례이다. 가장 critical한 질문으로, 왜 저런 정규분포 가정을 하게 되었을까? 주로 first-stage에서 사용되는 DLNM coefficient는 quasi-likelihood를 통해 추정되기 때문에, sample이 적당히 많다면 large sample theory에 의해서 coefficient의 joint distribution을 정규분포로 근사할 수 있다. (지도교수님이 지적해주신 부분, 정확한 process는 내가 정확하게 알고 있지는 않으니 시간 날 때 다시 공부하자.) 분산이 저렇게 생긴 이유는 between-study heterogeneity <span class="arithmatex">\(\Psi\)</span>와 within-study variability <span class="arithmatex">\(S_i\)</span>는 서로 독립이라는 가정 때문이다. 평균이 study마다 달라지는게 meta-regression 모델이고, 그 평균은 meta-predictor에 의해서 설명되는 모양새다. 저자들은 <strong>linear-mixed model</strong>에서 영감을 받았다고 한다. Meta-regression 모델을 <span class="arithmatex">\(\hat{\theta}_i \lvert u_i \sim N_k(X_i \beta + u_i, S_i)\)</span>, <span class="arithmatex">\(u_i \sim N_k(0, \Psi)\)</span>라고 다시 쓸 수 있는데, 여기서 <span class="arithmatex">\(X_i \beta\)</span>는 fixed-effect이고 <span class="arithmatex">\(u_i\)</span>가 random-effect다. 고정 효과와 랜덤 효과가 더해져 "mixed-effect"가 되어 mixed model이라는 이름이 붙었다.</p>
+<h3 id="_4">추정 방법</h3>
+<p>모델을 알아봤으면, 이젠 parameter를 추정할 차례다. Study의 heterogeneity를 설명하는 <span class="arithmatex">\(\Psi\)</span>는 <span class="arithmatex">\(k\times k\)</span> 모양의 행렬인데, upper-triangular 부분 성분의 개수 <span class="arithmatex">\(k(k+1)/2\)</span>개의 값이 필요하다. <span class="arithmatex">\(\beta\)</span>는 meta-predictor가 각 outcome에 끼치는 영향을 말해주는데, <span class="arithmatex">\(X_i\)</span>의 column 개수인 <span class="arithmatex">\(k \times p\)</span> 만큼의 값이 필요하다. 따라서 reducing-dlnm에 나와있는 방법대로 <span class="arithmatex">\(k\)</span>를 줄이면 계산 속도가 빨라지는 것이다. 추정은 여러가지 방법으로 할 수 있는데, 이 논문에서는 maximum likelihood (MLE) 그리고 restricted maximum likelihood (REML)를 사용했다. 편미분을 사용해서 closed form을 구하기 힘든 탓에, iterative approach를 통해 수렴을 만들어 추정한다. 먼저 <span class="arithmatex">\(\Psi\)</span>를 안다고 가정하고 고정시킨 후 likelihood를 <span class="arithmatex">\(\beta\)</span>에 대해 최대화한다. 구해진 maximizer를 원래 likelihood에 대입해서 <span class="arithmatex">\(\Psi\)</span>에 대한 식으로 만든 후 다시 <span class="arithmatex">\(\Psi\)</span>에 대한 최적화 과정을 거쳐 maximizer를 구한다. 그리고 이를 수렴할 때 까지 반복하여 REML을 구한다.</p>
+<h3 id="_5">가설검정 및 관련된 통계량</h3>
+<p>가장 궁금한 것은, 실제로 meta-predictor를 포함한 분석이 의미가 있었는지다. 즉 귀무가설 <span class="arithmatex">\(\beta = 0\)</span>을 검정해봐야 한다. 다행히 추정 과정이 Likelihood에 기반했기 때문에 Wald test나 Likelihood Ratio test를 사용할 수 있다. R을 사용해 모델을 학습시키고 summary 함수에 학습한 모델을 입력하면 해당 통계량을 알 수 있다. 정확하게 계산하는 방법은 현재 가물가물하니까, 학기 시작하면 복습하도록 하자.</p>
+<p>Study 사이에도 결과에 영향을 주는 variability가 있을 수 있고, 그것을 <span class="arithmatex">\(\Psi\)</span>로 썼다. 따라서 귀무가설 <span class="arithmatex">\(\Psi = 0\)</span>에 자연스럽게 관심이 생기는데, 이는 Cochran Q test를 통해 검정할 수 있다. 통계량은 <span class="arithmatex">\(Q = \sum_i ( \hat{\theta}_i - X_i \hat{\beta} )^t S_i^{-1} ( \hat{\theta}_i - X_i \hat{\beta} )\)</span>로 정의되며 이는 점근적으로 <span class="arithmatex">\(\chi^2\)</span>, <span class="arithmatex">\(df = n-q\)</span>를 따른다. Linear regression의 residual sum of squares (RSS)에서 파생된 것 처럼 생겼다. <span class="arithmatex">\((\hat{\theta}_i - X_i \hat{\beta})\)</span>는 random effect가 없을 때 편차로 볼 수 있다. 따라서 <span class="arithmatex">\(Q\)</span>가 의미하는 것은, 전체 variability의  within-study variability에 대한 비율이 된다. 이 값이 크면 <span class="arithmatex">\(S_i\)</span>로는 다 설명할 수 없는 variability가 있다, 즉 between-study variability 존재의 증거가 되고, 반대로 작으면 대부분의 variability가 within-study variability로 설명된다는 얘기다.</p>
+<p><span class="arithmatex">\(1- R^2\)</span>를 떠올려보자. 이 통계량은 전체 variability에서 linear regression으로 설명되지 않은 variability의 비율을 말해준다. 따라서 이 값이 낮으면 linear regression 모델이 주어진 데이터를 잘 표현한다고 말할 수 있었다. (물론 아주 기본적인 선형모델에서.) 비슷하게, 전체 variability 중 meta-regression으로 설명하지 못한 variability의 비율은 <span class="arithmatex">\((Q-n+q)/Q\)</span>로 잴 수 있다. 이 값을 <span class="arithmatex">\(I^2\)</span>라고 한다. Meta-predictor를 추가해서 <span class="arithmatex">\(I^2\)</span>가 줄어든다면 좋은 meta-predictor라고 할 수 있는 근거가 된다.</p>
+<p>정리:</p>
+<ol>
+<li>Meta-predictor의 significance를 위해 Wald-test, likelihood ratio test</li>
+<li>Between-study variability (heterogeneity)의 significance를 위해 Cochran Q-test</li>
+<li>전체 variability 중 heterogeneity 때문에 발생한 variability의 비율은 <span class="arithmatex">\(I^2\)</span></li>
+</ol>
+<h3 id="_6">예측</h3>
+<p>Fixed effect만 가지고 prediction을 계산하는 방법과, random effect를 고려하여 계산하는 방법이 있다. 전자는 주어진 meta-predictor <span class="arithmatex">\(x_0\)</span>를 가지고 design matrix <span class="arithmatex">\(X_0\)</span>를 만든 후 <span class="arithmatex">\(X_0 \hat{\beta}\)</span>를 계산하는 방법이고, 후자는 Best linear unbiased predictor (BLUP)를 계산해 사용한다. Bayesian hierarchical model처럼 BLUP는 study 간 정보를 종합하여 좀 더 shrink 된 predicted value를 뱉는다. BLUP의 생김새를 뜯어보면 Gaussian 분포의 conditional mean 처럼 생겼는데, 복습하면서 그 모양을 추측해보도록 하자.</p>
+<hr />
+<h3 id="references">References</h3>
+<ol>
+<li>Gasparrini A, Armstrong B, Kenward MG. Multivariate meta-analysis for non-linear and other multi-parameter associations. <em>Stat Med.</em> 2012 Dec 20;31(29):3821-39. doi: 10.1002/sim.5471. Epub 2012 Jul 16. PMID: 22807043; PMCID: PMC3546395.</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
