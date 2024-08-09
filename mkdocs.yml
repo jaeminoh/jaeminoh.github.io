@@ -1,0 +1,13 @@
+site_name: Jaemin Oh
+
+theme:
+  name: material
+
+plugins:
+  - search
+  - blog
+
+markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
