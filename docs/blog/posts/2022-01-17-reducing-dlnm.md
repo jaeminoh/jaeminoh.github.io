@@ -1,9 +1,9 @@
 ---
 date:
   created: 2022-01-17
-  #updated:
 
-#draft: true
+categories:
+  - Statistics
 ---
 
 # Review: Reducing and meta-analysing estimates from distributed lag non-linear models 논문 정리
@@ -19,7 +19,7 @@ Journal: BMC Medical Research Methodology (2013)
 1. DLNM을 사용해 얻어진 coefficient를 모두 사용한 메타 분석은 computationally ineffecient.
 2. 주로 보는 효과(overall effect)에 관련된 coefficient만 따로 뽑아서 활용하는게 좋다.
 
-###  
+<!-- more -->
 
 ### 본문
 

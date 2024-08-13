@@ -2,27 +2,38 @@ site_name: Jaemin Oh
 
 site_url: https://jaeminoh.github.io
 repo_url: https://github.com/jaeminoh/jaeminoh.github.io
+repo_name: jaeminoh/homepage
 
 theme:
+  favicon: images/favicon.png
   name: material
   icon:
     repo: fontawesome/brands/github
 
 plugins:
   - search
-  - blog
+  - blog:
+      blog_toc: true
   - bibtex:
       bib_file: "bibliography/library.bib"
       csl_file: "bibliography/ima.csl"
 
 markdown_extensions:
+  - attr_list
   - md_in_html
   - def_list
   - footnotes
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.arithmatex:
       generic: true
+
 
 extra:
   analytics:

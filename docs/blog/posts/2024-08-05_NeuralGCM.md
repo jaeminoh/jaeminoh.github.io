@@ -3,6 +3,8 @@ date:
   created: 2024-07-26
   updated: 2024-08-09
 
+categories:
+  - Numerical Weather Prediction
 #draft: true
 ---
 
@@ -15,6 +17,8 @@ Two advantages over pure ML methods:
 - Long time simulation
 
 24년 7월 22일 (내 28번째 생일), Nature에 “Neural general circulation models for weather and climate” 이라는 제목의 논문이 올라왔다. “Neural” 키워드를 보고 “data 때려 맞추는 모델 아니야?” 라고 생각할 수 있겠지만, 그렇지 않다. 
+
+<!-- more -->
 
 General circulation model은 (조사가 필요하다) 날씨를 예측하는 physics 기반 수치모델을 말한다. 이 모델은 기후, 날씨 dynamics를 나타내는 PDE로 이루어져 있는데, 당연하게도 작은 scale의 현상들 (구름 형성, 국소적 강우, …)은 상대적으로 무시한다.
 

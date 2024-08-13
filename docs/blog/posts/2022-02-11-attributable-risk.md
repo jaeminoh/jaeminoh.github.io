@@ -1,9 +1,9 @@
 ---
 date:
   created: 2022-02-11
-  #updated:
 
-#draft: true
+categories:
+  - Statistics
 ---
 
 # Review: Attributable risk from distributed lag models
@@ -21,7 +21,7 @@ Suggested prerequisite: understanding about the DLNM framework.
 1. multi-exposure attributable risk 개념을 응용해 attributable risk가 temporal dimension을 반영하도록 개념을 확장함.
 2. 이 방법은 특정 exposure range에 대해서 attributable risk를 계산할 수 있다는 장점도 가지고 있음.
 
-
+<!-- more -->s
 
 ### 소개
 

@@ -1,9 +1,9 @@
 ---
 date:
   created: 2022-02-18
-  #updated:
 
-#draft: true
+categories:
+  - Statistics
 ---
 
 # Review: Sample size issues in time series regressions of counts on environmental exposures
@@ -19,7 +19,7 @@ Journal: BMC Medical Research Methodology (2020)
 1. Effect measure에 관련된 검정력을 특정 값 이상으로 보장하기 위해서 얼마나 많은 sample size가 필요한지 알고 싶다.
 2. 이 논문에서 소개된 approximation for Standard error of effect measure를 사용하면, 검정력을 보장하기 위한 count의 수를 알 수 있다. (sample size 대신)
 
-
+<!-- more -->
 
 ### 소개
 
