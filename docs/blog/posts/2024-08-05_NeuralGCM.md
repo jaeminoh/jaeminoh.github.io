@@ -5,10 +5,11 @@ date:
 
 categories:
   - Numerical Weather Prediction
+  - Review
 #draft: true
 ---
 
-# Neural general circulation models
+# Review: Neural general circulation models
 Machine Learning accelerated global weather prediction model developed by Google.
 Written in JAX framework [@jax2018github;@deepmind2020jax]
 Two advantages over pure ML methods:

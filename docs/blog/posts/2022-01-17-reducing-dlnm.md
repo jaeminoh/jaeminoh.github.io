@@ -4,9 +4,10 @@ date:
 
 categories:
   - Statistics
+  - Review
 ---
 
-# Review: Reducing and meta-analysing estimates from distributed lag non-linear models 논문 정리
+# Review: Reducing and meta-analysing estimates from distributed lag non-linear models
 
 Author: Antonio Gasparrini, Ben Armstrong
 
