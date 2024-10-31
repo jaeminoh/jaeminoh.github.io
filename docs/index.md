@@ -1,6 +1,8 @@
 # Wecome!
 
-I am Jaemin Oh (오재민) a math PhD student at Korea Advanced Institute of Science and Techonology (KAIST).
+I am Jaemin Oh (오재민) a math PhD student at Korea Advanced Institute of Science and Techonology (KAIST) under the supervision of Professor [Youngjoon Hong](https://youngjoonhong.com).
+I am interested in the intersection of scientific computing and machine learning, so called Scientific Machine Learning (SciML).
+
 
 **Contact**
 
