@@ -13,3 +13,14 @@ publish the site: `mkdocs gh-deploy --force`
 
 script for publish the site: `sh publish.sh`
 
+
+## How to install pandoc
+pandoc is necessary for bibtex.
+
+1. `pip install pypandoc`
+2. run Python REPL and type:
+```python
+from pypandoc.pandoc_download import download_pandoc
+
+download_pandoc()
+```
