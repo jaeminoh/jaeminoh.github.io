@@ -18,7 +18,7 @@ My research interests lie in the intersection of scientific computing and machin
 
 - PIG: Physics-Informed Gaussians as Adaptive Parametric Mesh Representations. [Namgyu Kang](https://github.com/NamGyuKang)\*, Jaemin Oh\*, Youngjoon Hong, and Eunbyung Park. [arXiv](https://arxiv.org/abs/2412.05994), [Project Page](https://namgyukang.github.io/Physics-Informed-Gaussians/), [Code](https://github.com/NamGyuKang/Physics-Informed-Gaussians)
 
-- Forward and Inverse Simulation of Pseudo-Two-Dimensional Model of Lithium-Ion Batteries Using Neural Networks. [Myeong-Su Lee](https://sites.google.com/view/mslee2/home)\*, Jaemin Oh\*, Dong-Chan Lee, KangWook Lee, Suncheol Park, and Youngjoon Hong. [preprint](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5034427)
+- Forward and Inverse Simulation of Pseudo-Two-Dimensional Model of Lithium-Ion Batteries Using Neural Networks. [Myeong-Su Lee](https://sites.google.com/view/mslee2/home)\*, Jaemin Oh\*, Dong-Chan Lee, KangWook Lee, Sooncheol Park, and Youngjoon Hong. [arXiv](https://arxiv.org/abs/2412.13200)
 
 - Separable Physics-informed Neural Networks for Solving the BGK Model of the Boltzmann Equation. Jaemin Oh, [Seungyeon Cho](https://scholar.google.com/citations?user=Q9GSED8AAAAJ&hl=en&oi=ao), [Eunbyung Park](https://silverbottlep.github.io), [Seok-Bae Yun](https://seokbaeyun.wordpress.com), and [Youngjoon Hong](https://www.youngjoonhong.com). [arXiv](https://arxiv.org/abs/2403.06342)
 
