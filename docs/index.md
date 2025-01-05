@@ -6,7 +6,7 @@ My research interests lie in the intersection of scientific computing and machin
 
 **Contact**
 
-- jaeminoh(dot)math 🐌 gmail.com
+- jaemin_oh 🐌 tamu (dot) edu
 
 **Education**
 
@@ -14,13 +14,6 @@ My research interests lie in the intersection of scientific computing and machin
 - B.S. Mar. 2015 - Aug. 2020, department of mathematics, Korea University, Seoul, South Korea
     - Military Service, Feb. 2017 - Feb. 2019 @ Korea Air Force, Weather Wing.
 
-**Publications**
-
-- PIG: Physics-Informed Gaussians as Adaptive Parametric Mesh Representations. Namgyu Kang\*, Jaemin Oh\*, Youngjoon Hong, and Eunbyung Park. [arXiv](https://arxiv.org/abs/2412.05994), [Project Page](https://namgyukang.github.io/Physics-Informed-Gaussians/), [Code](https://github.com/NamGyuKang/Physics-Informed-Gaussians)
-
-- Forward and Inverse Simulation of Pseudo-Two-Dimensional Model of Lithium-Ion Batteries Using Neural Networks. Myeong-Su Lee\*, Jaemin Oh\*, Dong-Chan Lee, KangWook Lee, Sooncheol Park, and Youngjoon Hong. [arXiv](https://arxiv.org/abs/2412.13200)
-
-- Separable Physics-informed Neural Networks for Solving the BGK Model of the Boltzmann Equation. Jaemin Oh, Seungyeon Cho, Eunbyung Park, Seok-Bae Yun, and Youngjoon Hong. [arXiv](https://arxiv.org/abs/2403.06342)
 
 **CV**
 
