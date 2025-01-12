@@ -4,4 +4,4 @@
 
 - Forward and Inverse Simulation of Pseudo-Two-Dimensional Model of Lithium-Ion Batteries Using Neural Networks. Myeong-Su Lee\*, Jaemin Oh\*, Dong-Chan Lee, KangWook Lee, Sooncheol Park, and Youngjoon Hong. [arXiv](https://arxiv.org/abs/2412.13200)
 
-- Separable Physics-informed Neural Networks for Solving the BGK Model of the Boltzmann Equation. Jaemin Oh, Seungyeon Cho, Eunbyung Park, Seok-Bae Yun, and Youngjoon Hong. [arXiv](https://arxiv.org/abs/2403.06342)
+- Separable Physics-informed Neural Networks for Solving the BGK Model of the Boltzmann Equation. Jaemin Oh, Seungyeon Cho, Eunbyung Park, Seok-Bae Yun, and Youngjoon Hong. [arXiv](https://arxiv.org/abs/2403.06342), [Code](https://github.com/jaeminoh/SPINN-BGK)
