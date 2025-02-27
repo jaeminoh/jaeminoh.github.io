@@ -1,7 +1,7 @@
 # Conference and Presentation
 
 ## 2025
-1. [2025 SIAM CSE](https://www.siam.org/conferences-events/siam-conferences/cse25/), Dallas, Unitied States, Mar 3 - Mar 7, 2025.
+1. [2025 SIAM CSE](https://www.siam.org/conferences-events/siam-conferences/cse25/), Dallas, Unitied States, Mar 3 - Mar 7, 2025. Title: [**SPINN-BGK: Separable PINN for the Boltzmann-BGK Model**](https://drive.google.com/file/d/1QqZ8OWRKNaZntNs9q5zFdFrzV02j7SXc/view?usp=sharing) (Poster)
 
 ## 2024
 1. [2024 KSIAM Annual Meeting](https://ksiam.org/Conference/ConferenceView.asp?AC=0&CODE=CC20240701&CpPage=#CONF), Busan, South Korea, Dec 5 - Dec 8, 2024. Title: [**Physics-Informed Neural Networks for Lithium-ion Battery Simulation with the Pseudo-Two-Dimensional Model**](https://drive.google.com/file/d/1bBKrRTekZUlEkF0L_mvEesNyNjw33uta/view?usp=share_link) (Poster)
