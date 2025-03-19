@@ -10,7 +10,7 @@ My research interests lie in the intersection of scientific computing and machin
 
 **Education**
 
-- Ph.D. Aug. 2020 - Feb. 2025, department of mathematical sciences, Korea advanced institute of science and technology (KAIST), Daejeon, South Korea (advisor: Professor [Youngjoon Hong](https://youngjoonhong.com))
+- Ph.D. Aug. 2020 - Feb. 2025, department of mathematical sciences, Korea advanced institute of science and technology (KAIST), Daejeon, South Korea (advisor: Professor [Youngjoon Hong](https://youngjoonhong.com), [thesis](https://drive.google.com/drive/folders/1zomZKKUpxNJb7NjXynIlHGp_tPqhe4WS?usp=share_link))
 - B.S. Mar. 2015 - Aug. 2020, department of mathematics, Korea University, Seoul, South Korea
     - Military Service, Feb. 2017 - Feb. 2019 @ Korea Air Force, Weather Wing.
 
