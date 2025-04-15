@@ -1,6 +1,6 @@
 # Wecome!
 
-I'm Jaemin Oh, a postdoc at Texas A&M University (mentor: Dr. [Byung-Jun Yoon](https://biomlsp.com) and Dr. [Xiaoning Qian](https://xqian37.github.io)).
+I'm Jaemin Oh, a postdoc at Texas A&M University.
 My research interests lie in the intersection of scientific computing and machine learning, a field known as Scientific Machine Learning (SciML).
 
 
