@@ -1,0 +1,1143 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jaeminoh.github.io/blog/2022/02/18/review-sample-size-issues-in-time-series-regressions-of-counts-on-environmental-exposures/">
+      
+      
+        <link rel="prev" href="../../11/review-attributable-risk-from-distributed-lag-models/">
+      
+      
+        <link rel="next" href="../../../03/03/review-forecasting-unemployment-using-internet-search-data-via-prism/">
+      
+      
+      <link rel="icon" href="../../../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Review: Sample size issues in time series regressions of counts on environmental exposures - Jaemin Oh</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-B9XBB4QRXM"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-B9XBB4QRXM",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-B9XBB4QRXM",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#review-sample-size-issues-in-time-series-regressions-of-counts-on-environmental-exposures" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Jaemin Oh" class="md-header__button md-logo" aria-label="Jaemin Oh" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jaemin Oh
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Review: Sample size issues in time series regressions of counts on environmental exposures
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jaeminoh/jaeminoh.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jaeminoh/homepage
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Jaemin Oh" class="md-nav__button md-logo" aria-label="Jaemin Oh" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Jaemin Oh
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jaeminoh/jaeminoh.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jaeminoh/homepage
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wecome!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Research/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Research
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Helpful resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Travel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conference and Presentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wastebasket
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2025/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2022/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/conference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/economics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Economics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/english-post/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English Post
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/essay/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Essay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/julia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Julia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/numerical-weather-prediction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numerical Weather Prediction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Review
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/statistics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/travel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Travel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/us/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    US
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/visa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      요약
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      소개
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#approximating-standard-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approximating standard error
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculation-of-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculation of power
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2022-02-18 00:00:00+00:00" class="md-ellipsis">February 18, 2022</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/statistics/">Statistics</a>, 
+                              <a href="../../../../category/review/">Review</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              5 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+
+  
+  
+
+
+<h1 id="review-sample-size-issues-in-time-series-regressions-of-counts-on-environmental-exposures">Review: Sample size issues in time series regressions of counts on environmental exposures</h1>
+<p>Author: Ben G. Armstrong, Antonio Gasparrini, Aurelio Tobias and Francesco Sera</p>
+<p>Journal: BMC Medical Research Methodology (2020)</p>
+<h3 id="_1">요약</h3>
+<ol>
+<li>Effect measure에 관련된 검정력을 특정 값 이상으로 보장하기 위해서 얼마나 많은 sample size가 필요한지 알고 싶다.</li>
+<li>이 논문에서 소개된 approximation for Standard error of effect measure를 사용하면, 검정력을 보장하기 위한 count의 수를 알 수 있다. (sample size 대신)</li>
+</ol>
+<!-- more -->
+
+<h3 id="_2">소개</h3>
+<p>단순 선형 회귀 모델에서 coefficient의 significance test의 검정력은 sample size가 증가할 수록 더 강해지는 경향을 보인다. <strong>(간단한 예시 필요)</strong> 일반적으로 생각해서, sample size가 많으면 작은 coefficient도 significant하다고 통계적으로 결론지을 수 있다는 이야기다. 역으로 생각해서, 주어진 값의 coefficient를 significant하다고 결론지으려면 얼마나 많은 sample size가 필요할지 궁금할 수도 있다. 예를 들어 exposure-risk relationship을 분석하고 싶은데, 필요한 sample size를 미리 계산해서 data collecting 과정에 반영하면 데이터 분석에 대한 수고를 좀 더 줄일 수 있을 것이다.</p>
+<p>내 블로그에 있는 글들이 항상 그렇듯, temperature-mortality relationship에 관심이 있다고 생각하자. First stage modeling을 할 때 non-linear lag effect를 반영한 dlnm을 주로 사용하게 되는데, 이는 effect measure로 꽤 많은 개수의 coefficient를 뱉어내기 때문에 살짝 복잡하다. 가장 간단한 경우를 생각하기 위해, 지난 며칠간의 온도 평균을 predictor로 둬서 effect measure를 단 한개의 coefficient로 나타냈다고 생각하자. (여러개의 coefficient가 있는 경우로 확장하면, 새 논문이 될 것이다.)</p>
+<p>Count data는 주로 Poisson regression 모델을 통해 설명한다. Overdispersion을 반영하려면 Quasi-Poisson 모델을 사용한다. 이 모델들은 estimator를 구할 때 closed formula가 없어서 iterative approach(보통 IRWLS)를 사용해 likelihood를 최대화시킨다. 덕분에 관심있는 coefficient의 standard error를 구할 수 있고, 그것에 기반하여 power of test를 계산할 수 있지만, power를 sample size에 대한 식으로 나타내기가 힘들다. 이 논문은 이러한 한계를 돌파하기 위해 standard error에 대한 새 approximation(in terms of the number of count)을 제시한 데 그 novelty가 있다고 본다.</p>
+<h3 id="approximating-standard-error">Approximating standard error</h3>
+<p>제일 간단한 경우를 다루기 위해서 데이터가 모아진 장소가 한 곳이라고 하자. Mortality count를 <span class="arithmatex">\(Y_i\)</span>, exposure를 <span class="arithmatex">\(x_i\)</span>, confounder를 <span class="arithmatex">\(z_i\)</span>라고 쓰면 <span class="arithmatex">\(y_i = \log ( Y_i ) = \alpha + \beta x_i + \gamma z_i\)</span>로 Poisson regression을 할 수 있다. 1차 테일러 근사를 사용하면 <span class="arithmatex">\(V(\log(Y_i) \lvert x_i, z_i) = 1/E(Y_i)\)</span>로 approximation이 가능하다. (<span class="arithmatex">\(\log Y_i\)</span>를 <span class="arithmatex">\(E(Y_i)\)</span>을 중심으로 전개) 이는 다시 <span class="arithmatex">\(1/\bar{Y}\)</span>로 근사할 수 있다.</p>
+<p>OLS coefficient의 분산을 구하는 것을 따라해서 <span class="arithmatex">\(\hat{\beta}\)</span>의 분산을 구할 수 있다. <a href="https://en.wikipedia.org/wiki/Frisch–Waugh–Lovell_theorem">Frisch-Waugh-Lovell theorem</a>은 <span class="arithmatex">\(\beta\)</span>의 estimate은 <span class="arithmatex">\(M_z y_i = \beta M_z x_i\)</span>를 OLS로 풀어 얻은 <span class="arithmatex">\(\beta\)</span>의 estimate과 같다는 것을 말해준다. 여기서 <span class="arithmatex">\(M_z\)</span>는 intercept를 포함한 <span class="arithmatex">\(Z\)</span>의 column space에 대한 orthogonal complement matrix이다. 즉 <span class="arithmatex">\(y\)</span>를 <span class="arithmatex">\(z\)</span>에 회귀해서 얻어진 잔차를 <span class="arithmatex">\(x\)</span>를 <span class="arithmatex">\(z\)</span>에 회귀해서 얻어진 잔차로 회귀하면 <span class="arithmatex">\(\hat{\beta}\)</span>가 계산된다. 따라서 <span class="arithmatex">\(V(\hat{\beta}) \approx \sigma^2 / S_{rr}\)</span>로 근사할 수 있다. (여기서 <span class="arithmatex">\(r\)</span>은 <span class="arithmatex">\(x\sim z\)</span>의 residual.) 등식이 되려면 <span class="arithmatex">\(\sigma^2\)</span> 대신 좀 더 복잡한 term이 들어가야 하지만, 생략한다. <span class="arithmatex">\(S_{rr} = x^t (I-P_z)x = x^t(I-J/n)x \cdot \frac{x^t (I-P_z)x}{x^t(I-J/n)x} = n V(x) (1-R^2_{x\lvert z}) = nV(x\lvert z)\)</span>로 표현할 수 있다. </p>
+<p>위 두 문단에서 근사한 값들을 대입하면, <span class="arithmatex">\(V(y_i) \approx 1/(n \bar{Y} V(x\lvert z)) = 1/(\sum Y_i \cdot V(x\lvert z))\)</span>가 된다. 이는 이 논문에 적혀있는 식 (2)에 해당한다. Counfounder를 control하지 않은 근사값은 <span class="arithmatex">\(z\)</span>에 대한 conditioning을 풀어줌으로써 가능하고 (식 (1)), overdispersion은 <span class="arithmatex">\(\sigma^2\)</span> 대신 <span class="arithmatex">\(\sigma^2 \phi\)</span>를 대입해 식 (2)의 분모에 <span class="arithmatex">\(\phi\)</span>를 대입해주면 된다 (식 (3)). 주목할 부분은 standard error의 근사가 sample size가 아닌 <span class="arithmatex">\(\sum Y_i\)</span>에 의존한다는 것이다. </p>
+<p>다음은 multi-study 구조를 반영한 근사 과정을 소개한다. 각 study마다 위에 소개된 식 (1) ~ (3)을 사용해 <span class="arithmatex">\(\hat{\beta_j}\)</span>의 standard error를 근사할 수 있다. 그럼 study마다 effect measure가 다를텐데, 이를 모두 아우르는 전체적인 effect measure의 standard error는 어떻게 근사할 수 있을까? 만약 effect measure <span class="arithmatex">\(\beta_j\)</span>에 대한 heterogeneity가 없다면, 그리고 <span class="arithmatex">\(V(x\lvert z)\)</span>가 같다면 그냥 데이터를 하나로 합쳐서 $\sum Y_i $대신 <span class="arithmatex">\(\sum _ {i,j} Y_{i,j}\)</span>를 사용하면 된다 (식 (4), overdispersion이 있는 경우는 식 (5)). 하지만 study 사이 heterogeneity가 존재한다면 식 (4), (5) 같은 간단한 근사의 정확성이 매우 떨어질 것이다.</p>
+<p>간단한 meta-analysis 구조로 <span class="arithmatex">\(\hat{\beta}^j = \hat{\beta_j} + b_j\)</span>라고 하자. 여기서 <span class="arithmatex">\(\beta\)</span>는 모든 study를 아우르는 effect measure이고, <span class="arithmatex">\(b_j\)</span>는 study간 차이를 나타내주는 random effect이다. <span class="arithmatex">\(E(\hat{\beta_j}) = \beta, E(b_j) = 0, V(b_j) = \tau^2\)</span>라고 하자. 그러면 <span class="arithmatex">\(\sum c_j = 1\)</span>인 weight <span class="arithmatex">\(c = (c_1, \cdots, c_J)\)</span>에 대해 <span class="arithmatex">\(\hat{\beta} = \sum_j c_j \hat{\beta}^j\)</span>의 기대값은 항상 <span class="arithmatex">\(\beta\)</span>가 된다. 분산은 <span class="arithmatex">\(\sum_j c_j^2 (V_j + \tau^2)\)</span>이 되는데 (<span class="arithmatex">\(V_j =\)</span> 식 (1) ~ (3) 중 하나) 이를 최소화 하는 <span class="arithmatex">\(c_j\)</span>를 찾으면 <span class="arithmatex">\(\frac{1}{k(V_j + \tau^2)}\)</span>, <span class="arithmatex">\(k = \sum_j \frac{1}{V_j + \tau^2}\)</span>가 된다. (Lagrange multiplier를 사용해서 계산했음.) 따라서 <span class="arithmatex">\(\hat{\beta}\)</span>의 분산은 <span class="arithmatex">\(1/k\)</span>가 된다. 이 값은 논문에 제시된 식 (6)의 값과 같다. 근데 이 값은 study마다 계산해야되고, <span class="arithmatex">\(\tau^2\)</span>에 대한 estimation까지 필요로 하기 때문에 식 (4), (5)에 비해 계산을 좀 더 많이 해야 한다.</p>
+<p><span class="arithmatex">\(\hat{\beta}\)</span>의 variability는 heterogenity와 within study variability로 분리해서 생각할 수 있는데, 식 (6)은 within study variability를 <span class="arithmatex">\(V_j\)</span>로 생각한 것이다. 만약 <span class="arithmatex">\(V_j\)</span> 값이 모두 같다고 가정한다면 식 (4)를 <span class="arithmatex">\(1-I^2\)</span>의 제곱근으로 나눈 값을 근사값으로 사용할 수 있으며, 이것은 식 (7)에 해당한다. 식 (4)가 random effect가 없다고 가정한 값이므로 이를 관측된 total variability / within study variability로 나누어 보정한 것이다.</p>
+<p>실제 standard error는 maximum likelihood에 의해서 측정되는데, 위 근삿값들은 대체로 실제 값을 underestimate하는 경우가 많았다. (table 1, 2 from the paper)</p>
+<h3 id="calculation-of-power">Calculation of power</h3>
+<p>Power는 null hypothesis를 기각할 확률을 나타낸다. 이 글에서 test statistic은 <span class="arithmatex">\(\hat{\beta}/se(\hat{\beta}) = T\)</span>가 되고, 이 값이 <span class="arithmatex">\(0\)</span>에서 너무 멀어지면 <span class="arithmatex">\(H_0: \beta = 0\)</span>을 기각한다. 유의수준을 <span class="arithmatex">\(0.05\)</span>로 생각하고 power를 계산하면 <span class="arithmatex">\(P(T &gt; z_{\alpha/2})+P( T &lt; -z_{\alpha/2})\)</span>가 된다. 계산의 편의성을 위해서 power는 둘 중 큰 값으로 근사하겠다. 실제 effect measure 값을 <span class="arithmatex">\(\beta_1\)</span>이라고 하면 power는 <span class="arithmatex">\(P(z &gt; z_{\alpha/2} - \beta_1/se(\hat{\beta})) = f(\lvert \beta_1 \lvert /se(\hat{\beta}) - z_{\alpha/2})\)</span>이 된다. (단, <span class="arithmatex">\(f\)</span>는 cdf of standard normal, 여기서는 <span class="arithmatex">\(\beta_1 &gt;0\)</span> 가정)</p>
+<p>원하는 power의 값을 <span class="arithmatex">\(p\)</span>라고 하고, <span class="arithmatex">\(f(\lvert \beta_1 \lvert /se(\hat{\beta}) - z_{\alpha/2}) \ge p\)</span>를 풀게 되면 <span class="arithmatex">\(\lvert \beta_1 \lvert /se(\hat{\beta}) - z_{\alpha/2} \ge z_{1-p}\)</span>가 되며, <span class="arithmatex">\(\lvert \beta_1 \lvert \ge se(\hat{\beta})(z_{\alpha/2} + z_{1-p})\)</span>가 detectable한 effect measure의 range가 된다. 여기서 <span class="arithmatex">\(se(\hat{\beta})\)</span>에 식 (1) ~ (7)을 알맞게 대입하면 <span class="arithmatex">\(\sum Y_i\)</span> 값을 얻을 수 있다. 이 과정을 통해서 얻어진 <span class="arithmatex">\(\sum Y_i\)</span>값 만큼 데이터를 모아야, 주어진 effect measure의 검정을 원하는 수준의 power로 (근사적으로) 시행할 수 있다는 뜻이 되겠다.</p>
+<h3 id="reference">Reference</h3>
+<ol>
+<li>Armstrong, B.G., Gasparrini, A., Tobias, A. <em>et al.</em> Sample size issues in time series regressions of counts on environmental exposures. <em>BMC Med Res Methodol</em> <strong>20,</strong> 15 (2020). https://doi.org/10.1186/s12874-019-0894-6</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
