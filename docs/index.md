@@ -6,7 +6,13 @@ My research interests lie in the intersection of scientific computing and machin
 
 **Contact**
 
-- jaemin_oh 🐌 tamu.edu (Feel free to reach out to me for anything you need!)
+``` py
+first_name = jaemin
+last_name = oh
+print(f"email: {first_name}_{last_name}🐌tamu.edu")
+```
+
+Please feel free to reach out to me for anything you need!
 
 **Education**
 
