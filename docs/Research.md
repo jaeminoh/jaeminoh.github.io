@@ -1,5 +1,7 @@
 **Papers**
 
+- Reparameterizing 4DVAR with neural fields. Jaemin Oh. [arXiv](https://arxiv.org/abs/2509.21751)
+
 - Machine Learning-Based Nonlinear Nudging for Chaotic Dynamical Systems. Jaemin Oh, Jinsil Lee, and Youngjoon Hong. [arXiv](https://arxiv.org/abs/2508.05778)
 
 - PIG: Physics-Informed Gaussians as Adaptive Parametric Mesh Representations. Namgyu Kang\*, Jaemin Oh\*, Youngjoon Hong, and Eunbyung Park. ICLR 2025. [arXiv](https://arxiv.org/abs/2412.05994), [Project Page](https://namgyukang.github.io/Physics-Informed-Gaussians/), [Code](https://github.com/NamGyuKang/Physics-Informed-Gaussians)
