@@ -1,4 +1,4 @@
-# Helpful resources
+# External links
 
 ## Advice
 
