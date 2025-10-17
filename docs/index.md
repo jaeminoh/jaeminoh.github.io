@@ -1,7 +1,12 @@
-# Wecome!
-
 I'm Jaemin Oh, a postdoc at Texas A&M University.
 My research interests lie in the intersection of scientific computing and machine learning, a field known as Scientific Machine Learning (SciML).
+
+![Profile](images/profile.png){ align=left }
+/// caption
+Photo credit: [Byung-Jun Yoon](https://biomlsp.com)
+///
+
+For more information, please refer to my [CV](https://drive.google.com/file/d/1X09GQZy3K4BWqaWKgSRgWkTFbIYKUJ3h/view?usp=share_link), [Google scholar :simple-googlescholar:](https://scholar.google.com/citations?user=_DhCnsYAAAAJ&hl=en), and [GitHub :simple-github:](https://github.com/jaeminoh).
 
 
 **Education**
@@ -9,13 +14,6 @@ My research interests lie in the intersection of scientific computing and machin
 - Ph.D. Aug. 2020 - Feb. 2025, department of mathematical sciences, Korea advanced institute of science and technology (KAIST), Daejeon, South Korea (advisor: Professor [Youngjoon Hong](https://youngjoonhong.com))
 - B.S. Mar. 2015 - Aug. 2020, department of mathematics, Korea University, Seoul, South Korea
     - Military Service, Feb. 2017 - Feb. 2019 @ Korea Air Force, Weather Wing.
-
-
-**Misc**
-
-- [CV](https://drive.google.com/file/d/1X09GQZy3K4BWqaWKgSRgWkTFbIYKUJ3h/view?usp=share_link)
-- Publication: [Google scholar :simple-googlescholar:](https://scholar.google.com/citations?user=_DhCnsYAAAAJ&hl=en)
-- Open source: [GitHub :simple-github:](https://github.com/jaeminoh)
 
 
 **News**
