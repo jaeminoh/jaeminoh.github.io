@@ -18,6 +18,7 @@ For more information, please refer to my [CV](https://drive.google.com/file/d/1X
 
 **News**
 
+- (01/15/2026) I will be starting a new postdoc position at Brown University.
 - (11/07/2025) I will be delivering a talk at the Crunch Seminar at Brown University.
 
 
