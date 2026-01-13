@@ -1,4 +1,4 @@
-I'm Jaemin Oh, a postdoc at Texas A&M University.
+I'm Jaemin Oh (오재민, 吳宰旼), a postdoc at Texas A&M University.
 My research interests lie in the intersection of scientific computing and machine learning, a field known as Scientific Machine Learning (SciML).
 
 ![Profile](images/profile.png){ align=left }
