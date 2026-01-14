@@ -28,7 +28,7 @@ For more information, please refer to my [CV](https://drive.google.com/file/d/1X
 ``` py
 first_name = jaemin
 last_name = oh
-print(f"email: {first_name}_{last_name}🐌tamu.edu")
+print(f"email: {first_name}_{last_name}🐌brown.edu")
 ```
 
 Please feel free to reach out to me for anything you need!
