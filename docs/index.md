@@ -17,12 +17,7 @@ For more information, please refer to my [CV](https://drive.google.com/file/d/1X
     - Military Service, Feb. 2017 - Feb. 2019 @ Korea Air Force, Weather Wing.
 
 
-**News**
-
-- (05/05/2026) I will be delivering a talk at Seoul National University.
-- (01/15/2026) I will be starting a new postdoc position at Brown University.
-- (11/07/2025) I will be delivering a talk at the Crunch Seminar at Brown University.
-- (01/01/2025) I will be starting a postdoc position at Texas A&M University.
+<!-- **News** -->
 
 
 **Contact**
@@ -34,3 +29,6 @@ print(f"email: {first_name}_{last_name}🐌brown.edu")
 ```
 
 Please feel free to reach out to me for anything you need!
+
+
+<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=6N7ESrxEyUskMB9M2gWuuMFHmZx24gMUGoB1UBMzhME&cl=ffffff&w=a"></script>
