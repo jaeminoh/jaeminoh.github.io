@@ -7,7 +7,7 @@ I am working at the intersection of machine learning and numerical analysis (Sci
 Photo credit: [Byung-Jun Yoon](https://biomlsp.com)
 ///
 
-For more information, please refer to my [CV](https://drive.google.com/file/d/1X09GQZy3K4BWqaWKgSRgWkTFbIYKUJ3h/view?usp=share_link), [Google scholar :simple-googlescholar:](https://scholar.google.com/citations?user=_DhCnsYAAAAJ&hl=en), and [GitHub :simple-github:](https://github.com/jaeminoh).
+For more information, please refer to my [CV](https://drive.google.com/file/d/1X09GQZy3K4BWqaWKgSRgWkTFbIYKUJ3h/view?usp=sharing), [Google scholar :simple-googlescholar:](https://scholar.google.com/citations?user=_DhCnsYAAAAJ&hl=en), and [GitHub :simple-github:](https://github.com/jaeminoh).
 
 
 **Education**
