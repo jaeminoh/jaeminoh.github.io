@@ -7,18 +7,17 @@ I am working at the intersection of machine learning and numerical analysis (Sci
 Photo credit: [Byung-Jun Yoon](https://biomlsp.com)
 ///
 
-For more information, please refer to my [CV](https://drive.google.com/file/d/1X09GQZy3K4BWqaWKgSRgWkTFbIYKUJ3h/view?usp=sharing), [Google scholar :simple-googlescholar:](https://scholar.google.com/citations?user=_DhCnsYAAAAJ&hl=en), and [GitHub :simple-github:](https://github.com/jaeminoh).
 
+**Experience**
+
+- Postdoctoral research associate, Jan. 2026 - Jan. 2027, division of applied mathematics, Brown University, Providence, RI, USA. mentor: Professor [George Em Karniadakis](https://scholar.google.com/citations?user=yZ0-ywkAAAAJ&hl=en&oi=ao)
+- Postdoctoral researcher, Jan. 2025 - Jan. 2026, department of electrical and computer engineering, Texas A&M University, College Station, TX, USA. mentor: Professor [Byung-Jun Yoon](https://scholar.google.com/citations?user=KxPLjXkAAAAJ&hl=en&oi=ao)
 
 **Education**
 
-- Ph.D. Aug. 2020 - Feb. 2025, department of mathematical sciences, Korea advanced institute of science and technology (KAIST), Daejeon, South Korea (advisor: Professor [Youngjoon Hong](https://youngjoonhong.com))
+- Ph.D. Aug. 2020 - Feb. 2025, department of mathematical sciences, Korea advanced institute of science and technology (KAIST), Daejeon, South Korea. advisor: Professor [Youngjoon Hong](https://scholar.google.com/citations?user=vsmezwMAAAAJ&hl=en)
 - B.S. Mar. 2015 - Aug. 2020, department of mathematics, Korea University, Seoul, South Korea
     - Military Service, Feb. 2017 - Feb. 2019 @ Korea Air Force, Weather Wing.
-
-
-<!-- **News** -->
-
 
 **Contact**
 
