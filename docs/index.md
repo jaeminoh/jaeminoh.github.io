@@ -1,3 +1,5 @@
+# About
+
 I'm Jaemin Oh (오재민, 吳宰旼), a postdoc at Brown University.
 
 I am working at the intersection of machine learning and numerical analysis (SciML), developing hybrid algorithms for partial differential equations and data assimilation. 
@@ -28,6 +30,3 @@ print(f"email: {first_name}_{last_name}🐌brown.edu")
 ```
 
 Please feel free to reach out to me for anything you need!
-
-
-<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=6N7ESrxEyUskMB9M2gWuuMFHmZx24gMUGoB1UBMzhME&cl=ffffff&w=a"></script>

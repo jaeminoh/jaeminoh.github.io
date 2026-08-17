@@ -8,7 +8,7 @@ Please refer to my [Google scholar :simple-googlescholar:](https://scholar.googl
 
 ### 2026
 
-Dong-Chan Lee, Myeong-Su Lee, Youngjoon Hong, **Jaemin Oh**, KangWook Lee, and Sooncheol Park, Physics-Informed Neural Networks for the Fully Coupled Electrochemical-Thermal Pseudo-2D Model of Lithium-Ion Batteries, accepted for *Journal of Energy Storage*.
+Dong-Chan Lee, Myeong-Su Lee, Youngjoon Hong, **Jaemin Oh**, KangWook Lee, and Sooncheol Park, Physics-Informed Neural Networks for the Fully Coupled Electrochemical-Thermal Pseudo-2D Model of Lithium-Ion Batteries, *Journal of Energy Storage*. [paper](https://www.sciencedirect.com/science/article/pii/S2352152X26036583)
 
 **Jaemin Oh**, Youngkyu Lee, Jerome Darbon, and George Em Karniadakis, Spectrally Safe Neural Operator Warm-Starts for Large-Scale Newton Solvers, submitted. [preprint](https://arxiv.org/abs/2606.21828)
 
@@ -16,7 +16,7 @@ Dong-Chan Lee, Myeong-Su Lee, Youngjoon Hong, **Jaemin Oh**, KangWook Lee, and S
 
 Shiqi Zhang, Wuwei Wu, **Jaemin Oh**, Jie Chen, and Xiaoning Qian+, Perron--Frobenius Operator Matching for Generative Modeling, accepted for *IFAC World Congress*. [preprint](https://arxiv.org/abs/2606.17465)
 
-Jinsung Lee, **Jaemin Oh**, Namhun Kim, Dongwon Kim, Byung-Jun Yoon, and Suha Kwak+, Structured State-Space Regularization for Generation-Friendly Image Tokenization, submitted. [preprint](https://arxiv.org/abs/2604.11089)
+Jinsung Lee, **Jaemin Oh**, Namhun Kim, Dongwon Kim, Byung-Jun Yoon, and Suha Kwak+, Structured State-Space Regularization for Generation-Friendly Image Tokenization, under review. [preprint](https://arxiv.org/abs/2604.11089)
 
 Raj S Roy, **Jaemin Oh**, ANM Nafiz Abeer, Maria I Giraldo, Tesuro Ikegami, Scott C Weaver, Nikolaos Vasilakis, Byung-Jun Yoon, and Xiaoning Qian+, An integrated computational antigen discovery pipeline with hierarchical filtering for emerging viral variants, *NAR Molecular Medicine*. [paper](https://academic.oup.com/narmolmed/article/3/2/ugag024/8675232)
 
@@ -24,7 +24,7 @@ Raj S Roy, **Jaemin Oh**, ANM Nafiz Abeer, Maria I Giraldo, Tesuro Ikegami, Scot
 
 ### 2025
 
-**Jaemin Oh**, Jinsil Lee, and Youngjoon Hong+, Machine Learning-Based Nonlinear Nudging for Chaotic Dynamical Systems, under revision. [preprint](https://arxiv.org/abs/2508.05778)/[code](https://github.com/jaeminoh/nnn)
+**Jaemin Oh**, Jinsil Lee, and Youngjoon Hong+, Machine Learning-Based Nonlinear Nudging for Chaotic Dynamical Systems, under review. [preprint](https://arxiv.org/abs/2508.05778)/[code](https://github.com/jaeminoh/nnn)
 
 **Jaemin Oh**, Seung Yeon Cho, Seok-Bae Yun, Eunbyung Park, and Youngjoon Hong+, Separable physics-informed neural networks for solving the BGK model of the Boltzmann equation, *SIAM Journal on Scientific Computing*. [paper](https://epubs.siam.org/doi/full/10.1137/24M1668809)/[preprint](https://arxiv.org/abs/2403.06342)/[code](https://github.com/jaeminoh/SPINN-BGK)
 
