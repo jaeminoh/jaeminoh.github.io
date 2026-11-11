@@ -1,14 +1,10 @@
 # Publications
 
-My main focus is on machine learning methods for scientific computing (SciML).
-
-Please refer to my [Google scholar :simple-googlescholar:](https://scholar.google.com/citations?user=_DhCnsYAAAAJ&hl=en), and [GitHub :simple-github:](https://github.com/jaeminoh).
-
 ^: equal contribution, +: correspondence.
 
 ### 2026
 
-Jinsung Lee, **Jaemin Oh**, Namhun Kim, Dongwon Kim, Byung-Jun Yoon, and Suha Kwak+, Structured State-Space Regularization for Generation-Friendly Image Tokenization, accepted for *NeurIPS 2026*. [preprint](https://arxiv.org/abs/2604.11089)
+[Jinsung Lee](https://jinsingsangsung.github.io), **Jaemin Oh**, Namhun Kim, Dongwon Kim, Byung-Jun Yoon, and Suha Kwak+, Structured State-Space Regularization for Generation-Friendly Image Tokenization, accepted for *NeurIPS 2026*. [preprint](https://arxiv.org/abs/2604.11089)
 
 Dong-Chan Lee, Myeong-Su Lee, Youngjoon Hong, **Jaemin Oh**, KangWook Lee, and Sooncheol Park, Physics-Informed Neural Networks for the Fully Coupled Electrochemical-Thermal Pseudo-2D Model of Lithium-Ion Batteries, *Journal of Energy Storage*. [paper](https://www.sciencedirect.com/science/article/pii/S2352152X26036583)
 

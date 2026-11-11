@@ -1,4 +1,4 @@
-mkdocs gh-deploy --force --no-history
+uv run mkdocs gh-deploy --force --no-history
 
 echo Remove site/
 
